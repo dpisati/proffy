@@ -1,32 +1,52 @@
 import React from 'react'
 import phoneIcon from '../../assets/images/icons/whatsapp.svg';
+import api from '../../services/api';
 
 import './styles.css';
 
-export default function TeacherItem() {
+export interface Teacher {
+    id: number;
+    avatar: string;
+    bio: string;
+    price: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+}
+
+interface TeacherItemProps {
+    teacher: Teacher
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+    function createNewConnection() {
+        api.post('connections', {
+            user_id: teacher.id
+        });
+    }
+
     return (
         <article className="teacher-item">
             <header>
-                <img src="https://avatars1.githubusercontent.com/u/43629737?s=460&u=03bb2f1f7aa7e69a800733382464e346bf0c00e1&v=4" alt="Daniel Pisati"/>
+                <img src={teacher.avatar} alt={teacher.name}/>
                 <div>
-                    <strong>Daniel Pisati</strong>
-                    <span>Design</span>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
                 </div>
             </header>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /><br />
-                Beatae saepe, fugiat cupiditate illo error magnam natus repellendus ad quas odit doloribus, 
-                enim necessitatibus voluptate adipisci tempora rerum animi veritatis qui.
+                {teacher.bio}
             </p>
             <footer>
                 <p>Price/Hour
-                    <strong>$ 40,00</strong>
+                    <strong>$ {teacher.price}</strong>
                 </p>
-                <button type="button">
+                <a target="_blank" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
                     <img src={phoneIcon} alt="Phone"/>
                     Get in touch
-                </button>
+                </a>
             </footer>
         </article>
     )
 }
+export default TeacherItem;
