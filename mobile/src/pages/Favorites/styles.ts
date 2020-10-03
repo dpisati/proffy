@@ -5,8 +5,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#f0f0f7'
     },
-    topBar: {
-        
+    teacherList: {
+        marginTop: -40,
     }
 });
 
