@@ -17,10 +17,12 @@ export default class ClassesController {
 
         if(!filters.week_day || !filters.subject || !filters.time) {
             return res.status(400).json({
-                error: 'Missing filtersa to search classes'
+                error: 'Missing filters to search classes'
             });
         }
+
         const timeInMinutes = convertHourToMinutes(time);
+
         const classes = await db('classes')
             .whereExists(function() {
                 this.select('class_schedule.*')
@@ -35,7 +37,6 @@ export default class ClassesController {
             .select(['classes.*', 'users.*'])
         
         res.send(classes);
-
     }
 
 
