@@ -1,7 +1,7 @@
 <h3 align="center">
-    <img alt="Logo" title="#logo" width="300px" src=".github/logo.png">
+    <img alt="Logo" title="#logo" width="300px" src=".github/top.png">
     <br><br>
-    <b>Recycle, save the environment!</b>  
+    <b>Find your best teacher at Proffy!</b>  
     <br>
 </h3>
 
@@ -22,9 +22,9 @@
 
 ## :bookmark: About
 
-<strong>Ecollect</strong> is a web application and mobile to help people find recycling hubs nearby.
+<strong>Proffy</strong> is a web application and mobile to help people find teachers and connect them.
 
-This application was made during the <strong>Next Level Week</strong> promoted by [Rocketseat](https://rocketseat.com.br/). The idea to create an ecological application came up inspired by the <strong>World Environment Day</strong>. The goal is to encourage awareness and action for the protection of the environment.
+This application was made during the <strong>Next Level Week 2</strong> promoted by [Rocketseat](https://rocketseat.com.br/).
 
 <a id="technologies"></a>
 
@@ -40,13 +40,13 @@ The project is made with:
 ## :heavy_check_mark: :computer: Web
 
 <h1 align="center">
-    <img alt="Web" src=".github/ecollect_web.gif" width="900px">
+    <img alt="Web" src=".github/web.gif" width="900px">
 </h1>
 
 ## :heavy_check_mark: :iphone: Mobile
 
 <h1 align="center">
-    <img alt="Mobile Detail" src=".github/ecollect_app.gif" width="300px">
+    <img alt="Mobile Detail" src=".github/mobile.gif" width="300px">
 </h1>
 
 <a id="how-to-use"></a>
@@ -64,7 +64,7 @@ The project is made with:
 1. First step, clone this github repository:
 
 ```sh
-  $ git clone https://github.com/dpisati/ecollect_app.git
+  $ git clone https://github.com/dpisati/proffy.git
 ```
 
 2. Run the application:
