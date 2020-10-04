@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="Logo" title="#logo" width="300px" src=".github/top.png">
+    <img alt="Logo" title="#logo" width="900px" src=".github/top.png">
     <br><br>
     <b>Find your best teacher at Proffy!</b>  
     <br>
